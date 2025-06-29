@@ -1,0 +1,12 @@
+{# templates/post/show.html.twig #}
+{% extends "base.html.twig" %}
+
+{% block title %}{{ post.title }} - {{ parent() }}{% endblock %}
+
+{% block content %}
+    <article>
+        <h2>{{ post.title }}</h2>
+        <div>{{ post.content|nl2br }}</div>
+    </article>
+    <a href="/posts">Zurück zur Übersicht</a>
+{% endblock %}

@@ -1,0 +1,17 @@
+{# templates/post/index.html.twig #}
+{% extends "base.html.twig" %}
+
+{% block title %}Alle Beiträge - {{ parent() }}{% endblock %}
+
+{% block content %}
+    <h2>Alle Beiträge</h2>
+    <ul>
+        {% for post in posts %}
+            <li>
+                <a href="/posts/{{ post.id }}">{{ post.title }}</a>
+            </li>
+        {% else %}
+            <li>Es wurden noch keine Beiträge gefunden.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
