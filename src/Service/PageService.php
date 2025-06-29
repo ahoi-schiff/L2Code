@@ -1,6 +1,9 @@
 <?php
+
 // src/Service/PageService.php
+
 namespace App\Service;
+
 use App\Repository\PageRepositoryInterface;
 
 class PageService

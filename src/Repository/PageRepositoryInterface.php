@@ -1,4 +1,5 @@
 <?php
+
 // src/Repository/PageRepositoryInterface.php
 
 namespace App\Repository;
@@ -10,7 +11,7 @@ interface PageRepositoryInterface
     /** @return Page */
     public function findAll(): array;
 
-    public function findById(int $id):?Page;
+    public function findById(int $id): ?Page;
 
     public function save(Page $page): bool;
 

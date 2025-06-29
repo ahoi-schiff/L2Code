@@ -1,4 +1,5 @@
 <?php
+
 // src/Core/Database.php
 
 namespace App\Core;
@@ -8,18 +9,18 @@ use PDOException;
 
 class Database
 {
-    private static?PDO $instance = null;
+    private static ?PDO $instance = null;
 
     public static function getInstance(): PDO
     {
         if (self::$instance === null) {
-            $driver = BaseController::readEnv('DB_DRIVER')?? 'mysql';
-            $host = BaseController::readEnv('DB_HOST')?? '';
-            $port = BaseController::readEnv('DB_PORT')?? 33306;
-            $dbname = BaseController::readEnv('DB_NAME')?? '';
-            $user = BaseController::readEnv('DB_USER')?? '';
-            $pass = BaseController::readEnv('DB_PASS')?? '';
-            $charset = BaseController::readEnv('DB_CHARSET')?? 'utf8mb4';
+            $driver = BaseController::readEnv('DB_DRIVER') ?? 'mysql';
+            $host = BaseController::readEnv('DB_HOST') ?? '';
+            $port = BaseController::readEnv('DB_PORT') ?? 33306;
+            $dbname = BaseController::readEnv('DB_NAME') ?? '';
+            $user = BaseController::readEnv('DB_USER') ?? '';
+            $pass = BaseController::readEnv('DB_PASS') ?? '';
+            $charset = BaseController::readEnv('DB_CHARSET') ?? 'utf8mb4';
 
             $dsn = "{$driver}:host={$host};port={$port};dbname={$dbname};charset={$charset}";
 
